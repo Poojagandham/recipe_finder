@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe Finder</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="recipe-finder-container" role="main">
+    <section class="hero" aria-label="Welcome section">
+      <h1>Recipe Finder</h1>
+      <p>Discover delicious meals with ingredients you have. Reduce waste, save time, and cook smarter!</p>
+    </section>
+
+    <form id="search-form" class="search-box" aria-label="Search recipes">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search by ingredient (e.g., 'chicken')"
+        aria-label="Search recipes by ingredient"
+        autocomplete="off"
+      />
+      <button type="submit" id="search-button" aria-label="Search recipes">Search</button>
+      <!-- Clear Search button will be added dynamically -->
+    </form>
+
+    <button id="random-button" class="random-button" aria-label="Get random recipes">
+      Get Random Recipes
+    </button>
+
+    <div class="message" id="message-area" role="status" aria-live="polite">
+      Search for a recipe or get some random inspiration!
+    </div>
+
+    <div class="results-grid" id="results-grid" aria-live="polite" aria-atomic="true"></div>
+  </div>
+
+  <div class="modal-container hidden" id="recipe-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close recipe details">+</button>
+      <div id="recipe-details-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
